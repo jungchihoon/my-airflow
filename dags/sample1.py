@@ -75,7 +75,7 @@ run = KubernetesPodOperator(
     is_delete_operator_pod=True,
     get_logs=True,
     #resources=pod_resources,
-    resources = k8s_resource_requirements,
+    #resources = k8s_resource_requirements,
     #env_from=configmaps,
     dag=dag,
 )
