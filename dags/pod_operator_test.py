@@ -45,6 +45,7 @@ run = KubernetesPodOperator(
     #image='ghcr.io/rohminji/batch:master',
     name="db-job",
     is_delete_operator_pod=True,
+    kubernetes_conn_id="kubernetes_default",
     get_logs=True,
     # resources = k8s_resource_requirements,
     dag=dag,
