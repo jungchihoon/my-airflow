@@ -39,16 +39,13 @@ start = DummyOperator(task_id="start", dag=dag)
 run = KubernetesPodOperator(
     task_id="kubernetes-pod-operator",
     namespace='airflow',
-    #in_cluster=True,
-    in_cluster=in_cluster,
+    in_cluster=True,
     image='nginx',
-    #cluster_context='cluster_context',
     #cluster_name=CLUSTER_NAME,
     #image='ghcr.io/rohminji/batch:master',
     name="db-job",
     is_delete_operator_pod=True,
     get_logs=True,
-    service_account_name='edu',
     # resources = k8s_resource_requirements,
     dag=dag,
 )
