@@ -1,3 +1,6 @@
+import datetime
+
+from airflow import DAG
 from airflow.providers.cncf.kubernetes.operators.pod import KubernetesPodOperator
 
 k = KubernetesPodOperator(
