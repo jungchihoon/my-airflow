@@ -35,6 +35,7 @@ start = DummyOperator(task_id="start", dag=dag)
 run = KubernetesPodOperator(
     task_id="kubernetes-pod-operator",
     namespace='default',
+    in_cluster=True,
     image='nginx',
     #image='ghcr.io/rohminji/batch:master',
     name="db-job",
