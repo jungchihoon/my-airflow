@@ -5,9 +5,10 @@ from airflow.models import DAG, Variable
 from airflow.operators.dummy_operator import DummyOperator
 from airflow.kubernetes.secret import Secret
 
-from airflow.providers.cncf.kubernetes.operators.kubernetes_pod import (
-    KubernetesPodOperator,
-)
+#from airflow.providers.cncf.kubernetes.operators.kubernetes_pod import (
+#    KubernetesPodOperator,
+#)
+from airflow.providers.cncf.kubernetes.operators.pod import KubernetesPodOperator
 
 dag_id = 'kubernetes-dag'
 
