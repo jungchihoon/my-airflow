@@ -41,6 +41,7 @@ run = KubernetesPodOperator(
     name="db-job",
     is_delete_operator_pod=True,
     get_logs=True,
+    service_account_name='default',
     # resources = k8s_resource_requirements,
     dag=dag,
 )
