@@ -46,6 +46,7 @@ run = KubernetesPodOperator(
     name="db-job",
     is_delete_operator_pod=True,
     kubernetes_conn_id="kubernetes_default",
+    # config_file="/home/airflow/composer_kube_config",
     get_logs=True,
     # resources = k8s_resource_requirements,
     dag=dag,
