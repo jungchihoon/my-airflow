@@ -34,9 +34,9 @@ start = DummyOperator(task_id="start", dag=dag)
 
 run = KubernetesPodOperator(
     task_id="kubernetes-pod-operator",
-    namespace='edu31',
-    #image='nginx',
-    image='ghcr.io/rohminji/batch:master',
+    namespace='default',
+    image='nginx',
+    #image='ghcr.io/rohminji/batch:master',
     name="db-job",
     is_delete_operator_pod=True,
     get_logs=True,
