@@ -8,6 +8,7 @@ from airflow.kubernetes.secret import Secret
 from airflow.providers.cncf.kubernetes.operators.kubernetes_pod import (
     KubernetesPodOperator,
 )
+
 dag_id = 'kubernetes-dag'
 
 task_default_args = {
@@ -42,7 +43,7 @@ run = KubernetesPodOperator(
     name="db-job",
     is_delete_operator_pod=True,
     get_logs=True,
-    service_account_name='default',
+    service_account_name='edu',
     # resources = k8s_resource_requirements,
     dag=dag,
 )
