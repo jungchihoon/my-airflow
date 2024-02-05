@@ -38,8 +38,9 @@ start = DummyOperator(task_id="start", dag=dag)
 
 run = KubernetesPodOperator(
     task_id="kubernetes-pod-operator",
-    namespace='default',
+    namespace='airflow',
     #in_cluster=True,
+    in_cluster=True,
     image='nginx',
     #cluster_context='cluster_context',
     cluster_name=CLUSTER_NAME,
