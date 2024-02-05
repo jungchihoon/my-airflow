@@ -30,5 +30,5 @@ with DAG(
             'print("Hello, World!")'
         ],  # 여기에 파이썬 스크립트를 입력하거나 실행할 파이썬 파일의 경로를 제공하세요.
         get_logs=True,
-        resources=resources,
+        # resources=resources,
     )
