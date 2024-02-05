@@ -7,7 +7,6 @@ from airflow.kubernetes.secret import Secret
 from airflow.providers.cncf.kubernetes.operators.kubernetes_pod import (
     KubernetesPodOperator,
 )
-
 dag_id = 'kubernetes-dag'
 
 task_default_args = {
