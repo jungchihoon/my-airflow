@@ -29,7 +29,7 @@ with DAG(
         cluster_context='k3s-test', # context 를 설정한다. context 가 하나면 설정 안해도 됨
         config_file='/bitnami/airflow/kube-config/config-chris', # kube config 화일을 설정한다.
         namespace="default", #  namespace를 설정한다.
-        image="python:3.10-slim",  # 이 이미지에 필요한 파이썬 스크립트와 의존성이 포함되어 있어야 합니다.
+        image="python:3.11-slim",  # 이 이미지에 필요한 파이썬 스크립트와 의존성이 포함되어 있어야 합니다.
         is_delete_operator_pod=False,
         cmds=["python", "-c"],
         arguments=[
